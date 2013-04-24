@@ -1,0 +1,28 @@
+MongoDb Dump-setup Guide:
+
+After installing MongoDb.(ex: i had installed MongoDB at D:\MangoDB\mongodb-win32-i386-2.0.6\bin
+
+step 1: At very first u need to create a folder called" MongoDB".Note:folder name may be various.
+
+command:D:\MangoDB\mongodb-win32-i386-2.0.6\bin>mongod --dbpath "C:\mongoDB"
+
+step 2:Restore the MongoDB which ever mongoDumb we have  at Build.
+
+ command:D:\MangoDB\mongodb-win32-i386-2.0.6\bin>mongorestore.exe "C:\phresco framework 2
+.0.25004\Phresco-Build-2.0.0.25004\mongo-dump\testing"
+
+step 3: Copy and paste admin UI service war into tomcat
+
+Tomcat Version:7.0.14 -> Webapps->service.war
+
+You will get a folder structure at webapps in the name of service war.
+
+step 4:samll changes
+
+change the Environment Name as a Developement in services.properties at Framework -> config ->service.properties.
+
+change the database name at phresco-env-config.xml
+
+step 5: connect the database and verify the sub list phresco-env file under the DB name which ever we connect early.
+ 
+

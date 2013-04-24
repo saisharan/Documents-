@@ -1,0 +1,50 @@
+
+command this TAG in Settings.xml
+
+1.<!--
+    <Connector executor="tomcatThreadPool"
+               port="8080" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+    -->
+
+2.// uncommand
+
+ <Connector port="8443" protocol="HTTP/1.1" SSLEnabled="true"
+               maxThreads="150" scheme="https" secure="true"
+               clientAuth="false" sslProtocol="TLS" 
+			   keystoreFile="C:/Test/sample.jks"
+               keystorePass="phresco" />
+
+    
+3.add the ip and machinename in C:/windows/system32/driver/etc/host
+
+
+sample EX:
+
+
+
+C:\Documents and Settings\anbarasan_j>keytool -genkey -alias anbarasan_j -keyalg
+ RSA -keystore c:\Test\sample.jks
+Enter keystore password:
+Re-enter new password:
+What is your first and last name?
+  [Unknown]:  anbarasan_j
+What is the name of your organizational unit?
+  [Unknown]:  photon
+What is the name of your organization?
+  [Unknown]:  helios
+What is the name of your City or Locality?
+  [Unknown]:  chennai
+What is the name of your State or Province?
+  [Unknown]:  Tamilnadu
+What is the two-letter country code for this unit?
+  [Unknown]:  tn
+Is CN=anbarasan_j, OU=photon, O=helios, L=chennai, ST=Tamilnadu, C=tn correct?
+  [no]:  yes
+
+Enter key password for <anbarasan_j>
+        (RETURN if same as keystore password):
+Re-enter new password:
+
+C:\Documents and Settings\anbarasan_j>
